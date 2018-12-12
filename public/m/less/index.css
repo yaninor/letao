@@ -1,0 +1,169 @@
+/* 定义全局变量 */
+html {
+  font-size: 100px;
+}
+body {
+  padding: 0.45rem 0;
+  position: relative;
+  height: 100vh;
+}
+img {
+  vertical-align: middle;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+#main {
+  height: 100%;
+}
+/*头部的公用样式*/
+#header {
+  height: 0.45rem;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #006699;
+  color: #fff;
+  z-index: 999;
+}
+#header h4 {
+  height: 0.45rem;
+  padding: 0 0.45rem;
+  margin: 0;
+  line-height: 0.45rem;
+  font-weight: normal;
+}
+#header a {
+  display: block;
+  width: 0.45rem;
+  height: 0.45rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 0.45rem;
+  color: #fff;
+}
+/*轮播图区域*/
+#slide {
+  width: 100%;
+}
+#slide img {
+  width: 100%;
+}
+/*导航区域*/
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.1rem;
+  margin: 0;
+}
+#nav ul li {
+  width: 33.33%;
+}
+#nav ul li a {
+  display: block;
+}
+#nav ul li a img {
+  width: 100%;
+}
+/*广告区域*/
+#banner {
+  display: flex;
+  padding: 0 0.1rem;
+}
+#banner .banner-left {
+  width: 66.66%;
+}
+#banner .banner-left a {
+  display: block;
+  font-size: 0;
+}
+#banner .banner-left a img {
+  width: 50%;
+  height: 1.2rem;
+}
+#banner .banner-right {
+  width: 33.33%;
+}
+#banner .banner-right a {
+  display: flex;
+}
+#banner .banner-right a img {
+  width: 100%;
+  height: 2.4rem;
+}
+/*品牌专区*/
+#brand {
+  width: 100%;
+  padding: 0.1rem;
+}
+#brand .brand-title a {
+  display: block;
+}
+#brand .brand-title a img {
+  width: 100%;
+}
+#brand .brand-content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#brand .brand-content ul li {
+  width: 25%;
+}
+#brand .brand-content ul li a img {
+  width: 100%;
+}
+/*运动专区*/
+#sport,
+#women,
+#man {
+  width: 100%;
+  padding: 0.1rem;
+  background-color: #fff;
+}
+#sport .sport-title a,
+#women .sport-title a,
+#man .sport-title a {
+  display: block;
+}
+#sport .sport-title a img,
+#women .sport-title a img,
+#man .sport-title a img {
+  width: 100%;
+}
+#sport .sport-content,
+#women .sport-content,
+#man .sport-content {
+  padding-top: 0.1rem;
+}
+#sport .sport-content ul,
+#women .sport-content ul,
+#man .sport-content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#sport .sport-content ul li,
+#women .sport-content ul li,
+#man .sport-content ul li {
+  width: 50%;
+  box-shadow: 0px 0px 2px hotpink;
+  text-align: center;
+  overflow: hidden;
+}
+#sport .sport-content ul li a,
+#women .sport-content ul li a,
+#man .sport-content ul li a {
+  display: block;
+}
+#sport .sport-content ul li a img,
+#women .sport-content ul li a img,
+#man .sport-content ul li a img {
+  width: 100%;
+}
