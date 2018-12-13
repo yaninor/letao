@@ -1,0 +1,29 @@
+@import 'base.less';
+/*主体区域*/
+#main {
+    background-color: #fff;
+    .product-list {
+        background-color: #eee;
+        height: 0.3rem;
+        .product-sort {
+            ul{
+                display: flex;
+                li{
+                    flex:1;
+                    &.active {
+                        a{
+                            color:red;
+                        }
+                    }
+                    a {
+                        display: block;
+                        text-align: center;
+                        font-size: 0.14rem;
+                        color:#666;
+                        line-height: 0.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

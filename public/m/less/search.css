@@ -64,10 +64,10 @@ li {
   font-size: 0.18rem;
   color: #fff;
 }
-#header a.fa-arrow-left {
+#header a:first-of-type {
   left: 0;
 }
-#header a.fa-search {
+#header a:last-of-type {
   right: 0;
 }
 /*底部的公用样式*/
@@ -102,47 +102,13 @@ li {
 #footer ul li a span {
   font-size: 0.12rem;
 }
-/*搜索的公用样式*/
-form {
-  display: flex;
-  padding: 0.1rem;
-}
-form .input-search {
-  flex: 1;
-  border-radius: 0.06rem 0 0 0.06rem;
+/*主体区域*/
+#main {
   background-color: #fff;
-  border: 1px solid #006699;
-  text-align: left;
+}
+#main .search-history .mui-card-header {
   font-size: 0.14rem;
-  margin: 0;
 }
-form .btn-search {
-  width: 0.6rem;
-  height: 0.34rem;
-  border-radius: 0 0.06rem 0.06rem 0;
-}
-/*商品的公用样式*/
-.product-content {
-  padding-top: 0.1rem;
-}
-.product-content ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-.product-content ul li {
-  width: 50%;
-  box-shadow: 0px 0px 2px hotpink;
-  text-align: center;
-  overflow: hidden;
-}
-.product-content ul li a {
-  display: block;
-}
-.product-content ul li a img {
-  width: 100%;
-}
-.product-content ul li a .product-name {
-  height: 0.42rem;
-  overflow: hidden;
-  margin: 0;
+#main .search-history .mui-card-header .btn-clear {
+  color: #666;
 }

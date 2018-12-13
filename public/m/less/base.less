@@ -35,7 +35,7 @@ li {
     position:fixed;
     top:0;
     left:0;
-    background-color: #006699;
+    background-color: @main-color;
     color:#fff;
     z-index: 999;
     h4 {
@@ -46,17 +46,34 @@ li {
         font-weight: normal;
         font-size:0.18rem;
     }
+    form {
+        height: 0.45rem;
+        padding: 0 0.45rem;
+        padding-top: 0.05rem;
+        input {
+            background-color: #fff;
+            margin:0;
+            text-align:left;
+            font-size:0.14rem;
+        }
+    }
     a {
         display: block;
         width: 0.45rem;
         height:0.45rem;
         position: absolute;
-        right: 0;
         top: 0;
         line-height: 0.45rem;
         font-size: 0.18rem;
         color:#fff;
+        &.fa-arrow-left{
+            left:0;
+        }
+        &.fa-search {
+            right:0;
+        }
     }
+
 }
 /*底部的公用样式*/
 #footer {
@@ -65,13 +82,18 @@ li {
     position:fixed;
     left:0;
     bottom:0;
-    background-color: #006699;
+    background-color: @main-color;
     padding:0.05rem 0;
     z-index:999;
     ul {
         display:flex;
         li{
             width: 25%;
+            &.active {
+                a {
+                    color:#ffa500;
+                }
+            }
             a{
                 display:block;
                 text-align:center;
@@ -87,3 +109,47 @@ li {
         }
     }
 }
+/*搜索的公用样式*/
+form {
+    display: flex;
+    padding: 0.1rem;
+    .input-search {
+        flex:1;
+        border-radius: 0.06rem 0 0 0.06rem;
+        background-color: #fff;
+        border: 1px solid @main-color;
+        text-align: left;
+        font-size: 0.14rem;
+        margin:0;
+    }
+    .btn-search{
+        width: 0.6rem;
+        height: 0.34rem;
+        border-radius: 0 0.06rem 0.06rem 0;
+    }
+}
+/*商品的公用样式*/
+.product-content {
+        padding-top: 0.1rem;
+        ul{
+            display: flex;
+            flex-wrap:wrap;
+            li {
+                width: 50%;
+                box-shadow: 0px 0px 2px hotpink;
+                text-align: center;
+                overflow: hidden;
+                a {
+                    display: block;
+                    img {
+                        width: 100%;
+                    }
+                    .product-name {
+                        height: 0.42rem;
+                        overflow:hidden;
+                        margin:0;
+                    }
+                }
+            }
+        }
+    }

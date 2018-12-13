@@ -64,10 +64,10 @@ li {
   font-size: 0.18rem;
   color: #fff;
 }
-#header a.fa-arrow-left {
+#header a:first-of-type {
   left: 0;
 }
-#header a.fa-search {
+#header a:last-of-type {
   right: 0;
 }
 /*底部的公用样式*/
@@ -102,47 +102,50 @@ li {
 #footer ul li a span {
   font-size: 0.12rem;
 }
-/*搜索的公用样式*/
-form {
+/*分类主体*/
+#main {
   display: flex;
-  padding: 0.1rem;
+  background-color: #ccc;
 }
-form .input-search {
-  flex: 1;
-  border-radius: 0.06rem 0 0 0.06rem;
+#main .category-left {
+  width: 0.8rem;
+  text-align: center;
+  position: relative;
+}
+#main .category-left ul {
+  min-height: 5.78rem;
+}
+#main .category-left ul li.active a {
+  background-color: #cccccc;
+}
+#main .category-left ul li a {
+  display: block;
   background-color: #fff;
-  border: 1px solid #006699;
-  text-align: left;
+  height: 0.45rem;
+  line-height: 0.45rem;
+  border-bottom: 1px solid #cccccc;
   font-size: 0.14rem;
-  margin: 0;
+  color: #666;
 }
-form .btn-search {
-  width: 0.6rem;
-  height: 0.34rem;
-  border-radius: 0 0.06rem 0.06rem 0;
+#main .category-right {
+  flex: 1;
+  text-align: center;
+  position: relative;
 }
-/*商品的公用样式*/
-.product-content {
-  padding-top: 0.1rem;
-}
-.product-content ul {
+#main .category-right ul {
+  padding: 0.1rem;
   display: flex;
   flex-wrap: wrap;
+  min-height: 5.78rem;
+  align-content: flex-start;
 }
-.product-content ul li {
-  width: 50%;
-  box-shadow: 0px 0px 2px hotpink;
-  text-align: center;
-  overflow: hidden;
+#main .category-right ul li {
+  width: 33.33%;
 }
-.product-content ul li a {
+#main .category-right ul li a {
   display: block;
+  background-color: #fff;
 }
-.product-content ul li a img {
+#main .category-right ul li a img {
   width: 100%;
-}
-.product-content ul li a .product-name {
-  height: 0.42rem;
-  overflow: hidden;
-  margin: 0;
 }

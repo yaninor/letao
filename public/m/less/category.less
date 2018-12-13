@@ -1,0 +1,52 @@
+@import 'base.less';
+/*分类主体*/
+#main {
+    display:flex;
+    background-color: #ccc;
+    .category-left{
+        width: 0.8rem;
+        text-align: center;
+        position: relative;
+        ul {
+            min-height: 5.78rem;
+            li {
+                &.active {
+                    a {
+                        background-color: #cccccc;
+                    }
+                }
+                a{
+                    display:block;
+                    background-color: #fff;
+                    height: 0.45rem;
+                    line-height:0.45rem;
+                    border-bottom: 1px solid #cccccc;
+                    font-size: 0.14rem;
+                    color:#666;
+                }
+            }
+        }
+    }
+    .category-right {
+        flex:1;
+        text-align: center;
+        position: relative;
+        ul{
+            padding: 0.1rem;
+            display:flex;
+            flex-wrap:wrap;
+            min-height: 5.78rem;
+            align-content: flex-start;
+            li{
+                width: 33.33%;
+                a {
+                    display:block;
+                    background-color:#fff;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

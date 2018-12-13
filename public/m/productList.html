@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘商城</title>
+    <link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="less/productList.less">
+    <script src="lib/less/less.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:history.back()" class="fa fa-arrow-left"></a>
+        <h4>商品列表</h4>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <form action="#">
+            <input type="search" class="input-search" name="" placeholder="请输入要搜索商品">
+            <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+        </form>
+        <div class="product-list">
+            <div class="product-sort">
+                <ul>
+                    <li class="active"><a href="#">上架时间<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#">价格<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#">销量<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#">折扣<i class="fa fa-angle-down"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sport-content product-content">
+                <ul>
+                <!--     <li>
+                        <a href="#">
+                            <img src="images/product.jpg" alt="" />
+                            <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
+                            <p>
+                                <span>￥566</span>
+                                <del>￥888</del>
+                            </p>
+                            <p>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/product.jpg" alt="" />
+                            <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
+                            <p>
+                                <span>￥566</span>
+                                <del>￥888</del>
+                            </p>
+                            <p>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </p>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></li>
+            <li class="active"><a href="#"><i class="fa fa-bars"></i><span>分类</span></a></li>
+            <li><a href="#"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href="#"><i class="fa fa-user"></i><span>个人中心</span></a></li>
+        </ul>
+    </footer>
+    <script type="text/html" id="productTpl">
+         {{each data value}}
+            <li>
+                <a href="#" class="product">
+                    <!-- {{value.pic[0].picAddr}} 图片是数组 取图片数组的第一个对象的图片的地址 -->
+                    <img class="product-img" src="{{value.pic[0].picAddr}}" alt="">
+                    <p class="product-name">{{value.proName}}</p>
+                    <p class="product-price">
+                        <span>￥{{value.price}}</span>
+                        <del>￥{{value.oldPrice}}</del>
+                    </p>
+                    <p class="product-buy">
+                        <button type="button" class="mui-btn mui-btn-primary ">立即购买</button>
+                    </p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/productList.js"></script>
+</body>
+</html>
