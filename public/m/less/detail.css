@@ -146,31 +146,38 @@ form .btn-search {
   overflow: hidden;
   margin: 0;
 }
-/*主体区域*/
 #main {
-  background-color: #fff;
-}
-#main .product-list {
-  background-color: #eee;
-  height: 0.3rem;
-}
-#main .product-list .product-sort ul {
-  display: flex;
-}
-#main .product-list .product-sort ul li {
-  flex: 1;
-}
-#main .product-list .product-sort ul li.active a {
-  color: red;
-}
-#main .product-list .product-sort ul li a {
-  display: block;
-  text-align: center;
   font-size: 0.14rem;
-  color: #666;
-  line-height: 0.3rem;
 }
-#main .sport-content {
-  height: 100%;
-  position: relative;
+#main .product-size {
+  line-height: 0.38rem;
+}
+#main .product-size .btn-size {
+  margin-top: 0.05rem;
+}
+#main .product-size .btn-size.active {
+  background-color: orange;
+}
+#header .fa-home {
+  right: 0;
+}
+/* 把详情页面的底部的样式覆盖 */
+#footer {
+  background-color: #ccc;
+}
+#footer ul li {
+  flex: 1;
+  padding: 0 0.05rem;
+}
+#footer ul li button {
+  width: 100%;
+}
+#footer ul li:first-child {
+  width: 0.625rem;
+  flex: none;
+  padding-top: 0.05rem;
+}
+#footer ul li:first-child a {
+  color: #666;
+  font-size: 0.2rem;
 }
