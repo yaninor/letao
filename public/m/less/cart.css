@@ -150,3 +150,59 @@ form.form-search .btn-search {
   overflow: hidden;
   margin: 0;
 }
+body {
+  padding-bottom: 0.75rem;
+}
+#header a.fa-refresh {
+  right: 0;
+}
+#main .cart-list .mui-pull-left.mui-checkbox .mui-media-object {
+  max-width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+#main .cart-list .mui-pull-left.mui-checkbox input {
+  position: static;
+  display: block;
+  margin: 0 auto;
+  font-size: 0.14rem;
+}
+#main .cart-list .mui-pull-left.mui-checkbox input:before {
+  color: pink;
+  font-size: 0.2rem;
+}
+#main .cart-list .mui-media-body {
+  white-space: normal;
+  line-height: 0.3rem;
+}
+#main .cart-list .mui-media-body .product-name {
+  color: #666;
+  line-height: 0.2rem;
+}
+#main .cart-list .mui-media-body .product-price span {
+  color: red;
+  font-weight: 600;
+}
+#main .cart-list .mui-media-body .product-price del {
+  color: #666;
+}
+#main .cart-list .mui-media-body .product-params {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.05rem;
+}
+#order {
+  position: fixed;
+  bottom: 0.45rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 0.3rem;
+  border-top: 1px solid #ccc;
+}
+#order .order-total {
+  padding: 0.05rem;
+  color: red;
+  font-weight: 600;
+}

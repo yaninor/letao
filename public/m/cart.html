@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘商城</title>
+    <link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="less/cart.less">
+    <script src="lib/less/less.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:history.back()" class="fa fa-arrow-left"></a>
+        <h4>购物车</h4>
+        <a href="#" class="fa fa-refresh"></a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+       <!-- 下拉刷新(区域滚动)的父容器 -->
+       <div class="mui-scroll-wrapper" id="refreshContainer">
+        <!-- 下拉刷新(区域滚动)的子容器 -->
+        <div class="mui-scroll">
+            <ul class="mui-table-view cart-list">
+                <li class="mui-table-view-cell mui-media">
+                   <!-- 右边默认看不到的内容 -->
+                   <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-primary">编辑</a>
+                    <a class="mui-btn mui-btn-danger">删除</a>
+                </div>
+                <a href="javascript:;">
+                    <div class="mui-pull-left mui-checkbox">
+                        <img class="mui-media-object" src="images/detail.jpg">
+                        <input name="checkbox1" value="Item 1" type="checkbox" checked>
+                    </div>
+                    <div class="mui-media-body">
+                        <p class="product-name">李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</p>
+                        <div class="product-price">
+                            <span>¥499.1</span>
+                            <del>¥888.1</del>
+                        </div>
+                        <div class="product-params">
+                            <div class="product-size">
+                                鞋码 : <span>44</span>
+                            </div>
+                            <div class="product-num">
+                                x<span>1</span>双
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+             <!-- 右边默认看不到的内容 -->
+             <div class="mui-slider-right mui-disabled">
+                <a class="mui-btn mui-btn-primary">编辑</a>
+                <a class="mui-btn mui-btn-danger">删除</a>
+            </div>
+            <a href="javascript:;">
+                <div class="mui-pull-left mui-checkbox">
+                    <img class="mui-media-object" src="images/detail.jpg">
+                    <input name="checkbox1" value="Item 1" type="checkbox" checked>
+                </div>
+                <div class="mui-media-body">
+                    <p class="product-name">李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</p>
+                    <div class="product-price">
+                        <span>¥499.1</span>
+                        <del>¥888.1</del>
+                    </div>
+                    <div class="product-params">
+                        <div class="product-size">
+                            鞋码 : <span>44</span>
+                        </div>
+                        <div class="product-num">
+                            x<span>1</span>双
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media">
+           <!-- 右边默认看不到的内容 -->
+           <div class="mui-slider-right mui-disabled">
+            <a class="mui-btn mui-btn-primary">编辑</a>
+            <a class="mui-btn mui-btn-danger">删除</a>
+        </div>
+        <a href="javascript:;">
+            <div class="mui-pull-left mui-checkbox">
+                <img class="mui-media-object" src="images/detail.jpg">
+                <input name="checkbox1" value="Item 1" type="checkbox" checked>
+            </div>
+            <div class="mui-media-body">
+                <p class="product-name">李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</p>
+                <div class="product-price">
+                    <span>¥499.1</span>
+                    <del>¥888.1</del>
+                </div>
+                <div class="product-params">
+                    <div class="product-size">
+                        鞋码 : <span>44</span>
+                    </div>
+                    <div class="product-num">
+                        x<span>1</span>双
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+</div>
+</div>
+</main>
+<!-- 订单区域 -->
+<section id="order">
+    <div class="order-total">订单总额 : ¥<span>0.00</span></div>
+    <button class="mui-btn mui-btn-danger" type="button">生成订单</button>
+</section>
+<!-- 底部区域 -->
+<footer id="footer">
+    <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></li>
+        <li><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></li>
+        <li  class="active"><a href="#"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+        <li><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></li>
+    </ul>
+</footer>
+<script type="text/html" id="cartListTpl">
+ <!-- 创建一个购物车商品列表的模板 -->
+        {{if data.length > 0}}
+            {{each data value}}
+            <li class="mui-table-view-cell mui-media">
+                <!-- 右边默认看不到的内容 -->
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-primary">编辑</a>
+                    <a class="mui-btn mui-btn-danger">删除</a>
+                </div>
+                <!-- 左边默认显示的内容  当滑动的时候 让左边盒子位移 左边盒子位移 右边挨着左边跟着过来了-->
+                <a href="javascript:;" class="mui-slider-handle">
+                    <div class="mui-pull-left mui-checkbox">
+                        <!-- 图片是一个数组 取数组中的第一个图片的图片地址 -->
+                        <img class="mui-media-object" src="{{value.pic[0].picAddr}}">
+                        <input name="checkbox1" value="Item 1" type="checkbox" checked>
+                    </div>
+                    <div class="mui-media-body">
+                        <p class="product-name">{{value.proName}}</p>
+                        <p class="product-price">
+                            <span>¥{{value.price}}</span>
+                            <del>¥{{value.oldPrice}}</del>
+                        </p>
+                        <!-- 商品参数 -->
+                        <div class="product-params">
+                            <div class="product-size">
+                                鞋码： <span>{{value.size}}</span>
+                            </div>
+                            <div class="product-num">
+                                x<span>{{value.num}}</span>双
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        {{else}}
+            <p>你的购物车空空如也!</p>
+        {{/if}}
+    </script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

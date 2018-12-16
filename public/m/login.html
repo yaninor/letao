@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘商城</title>
+    <link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="less/login.less">
+    <script src="lib/less/less.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <h4>用户登录</h4>
+        <a href="search.html" class="fa fa-search"></a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>用户名</label>
+                <input type="text" class="mui-input-clear username" placeholder="请输入用户名">
+            </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input type="password" class="mui-input-password password" placeholder="请输入密码">
+            </div>
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary btn-login" >登录</button>
+                <button type="button" class="mui-btn mui-btn-danger btn-register" >免费注册</button>
+            </div>
+        </form>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></li>
+            <li><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li  class="active"><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></li>
+        </ul>
+    </footer>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

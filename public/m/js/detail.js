@@ -67,16 +67,19 @@ $(function(){
                             console.log(e);
                             if(e.index == 0){
                                 //点击了左边 跳转到购物车查看
+                                location = 'cart.html';
                             }else{
                                 // 点击否就不看 表示还继续吗
                                 mui.toast('你继续加一件就可以脱离单身了！', { duration: 3000, type: 'div' });
                             }
                         });
+                    }else {
+                        var registerUrl = location.href;
+                        location = 'login.html?registerUrl='+registerUrl;
                     }
             }
         })
     })
-
          // 根据url参数名取值
          function getQueryString(name) {
             var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');

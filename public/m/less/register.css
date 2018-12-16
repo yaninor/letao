@@ -150,3 +150,16 @@ form.form-search .btn-search {
   overflow: hidden;
   margin: 0;
 }
+/*主体部分区域*/
+#main .mui-input-group .mui-button-row {
+  padding: 0.05rem 0.1rem;
+}
+#main .mui-input-group .btn-vcode {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  margin-right: 0.05rem;
+}
+#main .mui-input-group .btn-login {
+  width: 100%;
+}

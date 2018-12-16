@@ -150,3 +150,7 @@ form.form-search .btn-search {
   overflow: hidden;
   margin: 0;
 }
+/*主体区域*/
+#main .mui-table-view .mui-table-view-cell .btn-logout {
+  width: 100%;
+}
