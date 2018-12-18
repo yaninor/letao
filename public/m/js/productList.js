@@ -24,6 +24,12 @@ $(function () {
             url:'/product/queryProduct',
         // page 第几页 pageSize 每页大小 proName搜索关键字
         data:{page:1,pageSize:2,proName:search},
+        beforeSend:function(){
+            $('.spinner').show();
+        },
+        complete:function(){
+            $('.spinner').hide();
+        },
         success:function (data) {
             // 3. 调用模板生成html
             var html = template('productTpl',data);
@@ -60,6 +66,12 @@ $(function () {
             url:'/product/queryProduct',
         // page 第几页 pageSize 每页大小 proName搜索关键字
         data:params,
+        beforeSend:function(){
+            $('.spinner').show();
+        },
+        complete:function(){
+            $('.spinner').hide();
+        },
         success:function (data) {
             // 3. 调用模板生成html
             var html = template('productTpl',data);
@@ -107,6 +119,12 @@ $(function () {
                             url: '/product/queryProduct',
                             // page 第几页使用当前++后的page变量 pageSize 每页大小 proName搜索关键字
                             data: { page: page, pageSize: 2, proName: search },
+                            beforeSend:function(){
+                                $('.spinner').show();
+                            },
+                            complete:function(){
+                                $('.spinner').hide();
+                            },
                             success: function(data) {
                                 // 7. 判断数据还有没有长度 有长度表示有数据 追加 没长度 表示没有数据 就结束下拉并且提示没有数据
                                 // data是对象 {data:[]}  data.data取 data对象里面的data数组 里面data数组的.length

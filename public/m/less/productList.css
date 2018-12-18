@@ -6,6 +6,7 @@ body {
   padding: 0.45rem 0;
   position: relative;
   height: 100vh;
+  font-size: 0.14rem;
 }
 img {
   vertical-align: middle;
@@ -16,6 +17,9 @@ ul {
 }
 li {
   list-style: none;
+}
+input {
+  font-size: 0.14rem;
 }
 #main {
   height: 100%;
@@ -103,11 +107,11 @@ li {
   font-size: 0.12rem;
 }
 /*搜索的公用样式*/
-form {
+form.form-search {
   display: flex;
   padding: 0.1rem;
 }
-form .input-search {
+form.form-search .input-search {
   flex: 1;
   border-radius: 0.06rem 0 0 0.06rem;
   background-color: #fff;
@@ -116,7 +120,7 @@ form .input-search {
   font-size: 0.14rem;
   margin: 0;
 }
-form .btn-search {
+form.form-search .btn-search {
   width: 0.6rem;
   height: 0.34rem;
   border-radius: 0 0.06rem 0.06rem 0;
@@ -134,6 +138,7 @@ form .btn-search {
   box-shadow: 0px 0px 2px hotpink;
   text-align: center;
   overflow: hidden;
+  margin: 0 0.05rem;
 }
 .product-content ul li a {
   display: block;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>乐淘商城</title>
     <link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.min.css">
@@ -55,23 +55,44 @@
             <li><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></li>
         </ul>
     </footer>
-    <script type="text/html" id="categoryTpl">
-        {{each rows value index}}
-        <li class="{{index==0?'active':''}}" ><a href="#" data-id="{{value.id}}">{{value.categoryName}}</a></li>
-        {{/each}}
-    </script>
-     <script type="text/html" id="secondCategoryTpl">
-        {{if rows.length > 0}}
-        {{each rows value index}}
-        <li><a href="#"><img src="{{value.brandLogo}}" alt="" /><p>{{value.brandName}}</p></a></li>
-        {{/each}}
-        {{else}}
-        <p>该分类下没有内容</p>
-        {{/if}}
-    </script>
-    <script src="lib/mui/js/mui.min.js"></script>
-    <script src="lib/zepto/zepto.min.js"></script>
-    <script src="lib/artTemplate/template-web.js"></script>
-    <script src="js/category.js"></script>
+    <!-- loading动画 -->
+    <div class="spinner">
+      <div class="spinner-container container1">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container2">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container3">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+</div>
+<script type="text/html" id="categoryTpl">
+    {{each rows value index}}
+    <li class="{{index==0?'active':''}}" ><a href="#" data-id="{{value.id}}">{{value.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="secondCategoryTpl">
+    {{if rows.length > 0}}
+    {{each rows value index}}
+    <li><a href="#"><img src="{{value.brandLogo}}" alt="" /><p>{{value.brandName}}</p></a></li>
+    {{/each}}
+    {{else}}
+    <p>该分类下没有内容</p>
+    {{/if}}
+</script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/category.js"></script>
 </body>
 </html>

@@ -28,6 +28,12 @@ $(function() {
         $.ajax({
             data:{id:id},
             url:'/category/querySecondCategory',
+            beforeSend:function(){
+                $('.spinner').show();
+            },
+            complete:function(){
+                $('.spinner').hide();
+            },
             success:function (data){
                 var html = template('secondCategoryTpl',data);
                 $('.category-right ul').html(html);

@@ -168,7 +168,7 @@ body {
   font-size: 0.14rem;
 }
 #main .cart-list .mui-pull-left.mui-checkbox input:before {
-  color: pink;
+  color: hotpink;
   font-size: 0.2rem;
 }
 #main .cart-list .mui-media-body {
@@ -205,4 +205,17 @@ body {
   padding: 0.05rem;
   color: red;
   font-weight: 600;
+}
+.mui-popup {
+  width: 2.9rem;
+}
+.mui-popup .mui-popup-text {
+  margin: 0.05rem 0 0;
+}
+.mui-popup .mui-popup-text .product-size {
+  padding: 0.1rem 0.05rem;
+  text-align: left;
+}
+.mui-popup .mui-popup-text .product-size .mui-btn {
+  margin-bottom: 0.05rem;
 }

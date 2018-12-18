@@ -19,14 +19,14 @@
     </header>
     <!-- 主体区域 -->
     <main id="main">
-       <!-- 下拉刷新(区域滚动)的父容器 -->
-       <div class="mui-scroll-wrapper" id="refreshContainer">
+     <!-- 下拉刷新(区域滚动)的父容器 -->
+     <div class="mui-scroll-wrapper" id="refreshContainer">
         <!-- 下拉刷新(区域滚动)的子容器 -->
         <div class="mui-scroll">
             <ul class="mui-table-view cart-list">
                 <li class="mui-table-view-cell mui-media">
-                   <!-- 右边默认看不到的内容 -->
-                   <div class="mui-slider-right mui-disabled">
+                 <!-- 右边默认看不到的内容 -->
+                 <div class="mui-slider-right mui-disabled">
                     <a class="mui-btn mui-btn-primary">编辑</a>
                     <a class="mui-btn mui-btn-danger">删除</a>
                 </div>
@@ -53,8 +53,8 @@
                 </a>
             </li>
             <li class="mui-table-view-cell mui-media">
-             <!-- 右边默认看不到的内容 -->
-             <div class="mui-slider-right mui-disabled">
+               <!-- 右边默认看不到的内容 -->
+               <div class="mui-slider-right mui-disabled">
                 <a class="mui-btn mui-btn-primary">编辑</a>
                 <a class="mui-btn mui-btn-danger">删除</a>
             </div>
@@ -81,8 +81,8 @@
             </a>
         </li>
         <li class="mui-table-view-cell mui-media">
-           <!-- 右边默认看不到的内容 -->
-           <div class="mui-slider-right mui-disabled">
+         <!-- 右边默认看不到的内容 -->
+         <div class="mui-slider-right mui-disabled">
             <a class="mui-btn mui-btn-primary">编辑</a>
             <a class="mui-btn mui-btn-danger">删除</a>
         </div>
@@ -126,45 +126,83 @@
         <li><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></li>
     </ul>
 </footer>
+    <!-- loading动画 -->
+    <div class="spinner">
+      <div class="spinner-container container1">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container2">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container3">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    </div>
 <script type="text/html" id="cartListTpl">
- <!-- 创建一个购物车商品列表的模板 -->
-        {{if data.length > 0}}
-            {{each data value}}
-            <li class="mui-table-view-cell mui-media">
-                <!-- 右边默认看不到的内容 -->
-                <div class="mui-slider-right mui-disabled">
-                    <a class="mui-btn mui-btn-primary">编辑</a>
-                    <a class="mui-btn mui-btn-danger">删除</a>
-                </div>
-                <!-- 左边默认显示的内容  当滑动的时候 让左边盒子位移 左边盒子位移 右边挨着左边跟着过来了-->
-                <a href="javascript:;" class="mui-slider-handle">
-                    <div class="mui-pull-left mui-checkbox">
-                        <!-- 图片是一个数组 取数组中的第一个图片的图片地址 -->
-                        <img class="mui-media-object" src="{{value.pic[0].picAddr}}">
-                        <input name="checkbox1" value="Item 1" type="checkbox" checked>
-                    </div>
-                    <div class="mui-media-body">
-                        <p class="product-name">{{value.proName}}</p>
-                        <p class="product-price">
-                            <span>¥{{value.price}}</span>
-                            <del>¥{{value.oldPrice}}</del>
-                        </p>
-                        <!-- 商品参数 -->
-                        <div class="product-params">
-                            <div class="product-size">
-                                鞋码： <span>{{value.size}}</span>
-                            </div>
-                            <div class="product-num">
-                                x<span>{{value.num}}</span>双
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
+   <!-- 创建一个购物车商品列表的模板 -->
+   {{if data.length > 0}}
+   {{each data value}}
+   <li class="mui-table-view-cell mui-media">
+    <!-- 右边默认看不到的内容 -->
+    <div class="mui-slider-right mui-disabled">
+    <a href="#popover" class="mui-btn mui-btn-primary btn-edit" data-product="{{value}}">编辑</a>
+        <a class="mui-btn mui-btn-danger btn-delete" data-id="{{value.id}}">删除</a>
+    </div>
+<!-- 左边默认显示的内容  当滑动的时候 让左边盒子位移 左边盒子位移 右边挨着左边跟着过来了-->
+<a href="javascript:;" class="mui-slider-handle">
+    <div class="mui-pull-left mui-checkbox">
+        <!-- 图片是一个数组 取数组中的第一个图片的图片地址 -->
+        <img class="mui-media-object" src="{{value.pic[0].picAddr}}">
+        <input name="checkbox1" type="checkbox" class="input-checked" data-price="{{value.price}}"  data-num="{{value.num}}">
+    </div>
+    <div class="mui-media-body">
+        <p class="product-name">{{value.proName}}</p>
+        <p class="product-price">
+            <span>¥{{value.price}}</span>
+            <del>¥{{value.oldPrice}}</del>
+        </p>
+        <!-- 商品参数 -->
+        <div class="product-params">
+            <div class="product-size">
+                鞋码： <span>{{value.size}}</span>
+            </div>
+            <div class="product-num">
+                x<span>{{value.num}}</span>双
+            </div>
+        </div>
+    </div>
+</a>
+</li>
+{{/each}}
+{{else}}
+<p>你的购物车空空如也!</p>
+{{/if}}
+</script>
+<script id="editCartTpl" type="text/html">
+        <div class="product-size">
+            <!-- 遍历 商品所有尺码 叫productSize -->
+            尺码： {{each productSize value}}
+            <!-- 判断当前选的尺码size 和 循环每一个value 如果一致的时候就添加 mui-btn-warning 类名 -->
+            <button type="button" class="mui-btn btn-size {{value == size ? 'mui-btn-warning' : '' }}" data-size="{{value}}">{{value}}</button>
             {{/each}}
-        {{else}}
-            <p>你的购物车空空如也!</p>
-        {{/if}}
+        </div>
+        <div class="product-num">
+            数量：
+            <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{productNum}}'>
+                <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                <input class="mui-numbox-input btn-" type="number" />
+                <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+            </div> 剩余：<span>{{productNum}}</span>件
+        </div>
     </script>
 <script src="lib/mui/js/mui.min.js"></script>
 <script src="lib/zepto/zepto.min.js"></script>
